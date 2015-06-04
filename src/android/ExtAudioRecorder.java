@@ -265,7 +265,8 @@ public class ExtAudioRecorder
 			if (state == State.INITIALIZING)
 			{
 				if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-					filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + argPath;
+					//filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + argPath;
+		        	filePath = "/data/data/" + handler.cordova.getActivity().getPackageName() + argPath;
 		        } else {
 		        	filePath = "/data/data/" + handler.cordova.getActivity().getPackageName() + argPath;
 		        }
